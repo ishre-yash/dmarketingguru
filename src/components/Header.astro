@@ -1,0 +1,188 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
+---
+
+<header class="bg-white w-full">
+  <nav class="z-50 p-4 bg-gray-50 fixed top-0 w-full">
+    <section class="flex justify-between items-center max-w-7xl mx-auto">
+      <a class="text-3xl font-bold leading-none" href="/">
+        <img src="favicon.svg" class="h-20 w-auto" alt="ShreYash" />
+      </a>
+      <div class="lg:hidden">
+        <button
+          class="navbar-burger flex items-center hover:bg-gray-100 rounded-lg p-1 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            class="block h-6 w-6 text-gray-900"
+            ><path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm6 5a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1Z"
+              clip-rule="evenodd"></path></svg
+          >
+        </button>
+      </div>
+      <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-4"
+      >
+        <li>
+          <HeaderLink
+            href="/"
+            class="px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+          >
+            Home
+          </HeaderLink>
+        </li>
+        <li>
+          <HeaderLink
+            href="/about"
+            class="px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+          >
+            About Us
+          </HeaderLink>
+        </li>
+
+        <li>
+          <HeaderLink
+            href="/blog"
+            class="px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+          >
+            Blog
+          </HeaderLink>
+        </li>
+        <li>
+          <HeaderLink
+            href="/contact"
+            class="px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+          >
+            Contact
+          </HeaderLink>
+        </li>
+      </ul>
+      <PrimaryButton
+        href="#"
+        title="Get Started"
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3"
+      />
+    </section>
+  </nav>
+
+  <div class="navbar-menu relative z-50 hidden lg:hidden">
+    <div class="navbar-backdrop fixed inset-0 backdrop-blur-sm bg-black/25">
+    </div>
+    <nav
+      class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-gray-50 overflow-y-auto"
+    >
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="/">
+          <img src="/favicon.svg" class="h-20" alt="ShreYash" />
+        </a>
+        <button
+          class="navbar-close flex items-center hover:bg-gray-100 rounded-lg p-1 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+        >
+          <svg
+            class="block h-6 w-6 text-gray-900"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <HeaderLink
+              href="/"
+              class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+            >
+              Home
+            </HeaderLink>
+          </li>
+          <li class="mb-1">
+            <HeaderLink
+              href="/about"
+              class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+            >
+              About Us
+            </HeaderLink>
+          </li>
+
+          <li class="mb-1">
+            <HeaderLink
+              href="/blog"
+              class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+            >
+              Blog
+            </HeaderLink>
+          </li>
+          <li class="mb-1">
+            <HeaderLink
+              href="/contact"
+              class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-gray-800 rounded-lg"
+            >
+              Contact
+            </HeaderLink>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div class="pt-6">
+          <PrimaryButton
+            href="#"
+            title="Get Started"
+            class="w-full text-center"
+          />
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Burger menus
+  document.addEventListener("DOMContentLoaded", function () {
+    // open
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+    // close
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
