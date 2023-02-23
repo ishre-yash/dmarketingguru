@@ -12,6 +12,7 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://ishre-yash.github.io',
+  base: '/dmarketingguru',
   integrations: [mdx(), sitemap(), tailwind(), prefetch()]
 });
