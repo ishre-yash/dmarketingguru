@@ -1,18 +1,11 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-
-// https://astro.build/config
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
-
-// https://astro.build/config
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ishre-yash.github.io',
-  base: '/dmarketingguru',
-  integrations: [mdx(), sitemap(), tailwind(), prefetch()]
+  site: "https://dmarketingguru.com/",
+  integrations: [mdx(), sitemap(), tailwind(), prefetch()],
 });
