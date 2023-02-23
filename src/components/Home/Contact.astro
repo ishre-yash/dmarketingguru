@@ -2,7 +2,7 @@
 import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
 ---
 
-<section class="relative pt-24 pb-36 bg-white overflow-hidden">
+<section class="relative pt-24 pb-36 bg-white overflow-hidden" id="contact">
   <img
     class="absolute bottom-0 left-1/2 transform -translate-x-1/2"
     src="/gradient.svg"
@@ -18,13 +18,13 @@ import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
       <p class="text-base text-gray-700 md:text-lg mt-2 mb-4">
         Wanna Grow Your Business Digitally Then Contact Us Today!
       </p>
-      <PrimaryButton class="mx-auto" title="Lets Talk!" href="/contact" />
+      <PrimaryButton class="mx-auto" title="Lets Talk!" href="#contact" />
     </div>
 
     <div class="flex flex-wrap -m-3">
       <div class="w-full md:w-1/3 p-3">
         <div
-          class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl"
+          class="p-11 h-full text-center bg-white/25 backdrop-blur-sm border border-blueGray-100 rounded-xl shadow-11xl"
         >
           <div class="relative flex items-center justify-center mx-auto">
             <svg
@@ -58,12 +58,16 @@ import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
           <h3 class="my-3 text-xl font-bold font-heading leading-snug">
             Send Email
           </h3>
-          <p class="font-medium leading-relaxed">info@mail.com</p>
+          <a
+            href="mailto:dmarketingguru0@gmail.com"
+            class="font-medium leading-relaxed hover:underline"
+            >dmarketingguru0@gmail.com</a
+          >
         </div>
       </div>
       <div class="w-full md:w-1/3 p-3">
         <div
-          class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl"
+          class="p-11 h-full text-center bg-white/25 backdrop-blur-sm border border-blueGray-100 rounded-xl shadow-11xl"
         >
           <div class="relative flex items-center justify-center mx-auto">
             <svg
@@ -92,12 +96,15 @@ import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
           <h3 class="my-3 text-xl font-bold font-heading leading-snug">
             Call Us
           </h3>
-          <p class="font-medium leading-relaxed">+91 0000 000 00</p>
+          <a
+            href="tel:639771317"
+            class="font-medium leading-relaxed hover:underline">+91 639771317</a
+          >
         </div>
       </div>
       <div class="w-full md:w-1/3 p-3">
         <div
-          class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl"
+          class="p-11 h-full text-center bg-white/25 backdrop-blur-sm border border-blueGray-100 rounded-xl shadow-11xl"
         >
           <div class="relative flex items-center justify-center mx-auto">
             <svg
@@ -126,7 +133,8 @@ import PrimaryButton from "@components/common/Button/PrimaryButton.astro";
             Address
           </h3>
           <p class="font-medium max-w-xs mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur
+            Near Birla farm chowk,<br /> Haripur Kalan, Haridwar,<br /> Uttarakhand
+            249411
           </p>
         </div>
       </div>
